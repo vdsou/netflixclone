@@ -1,0 +1,25 @@
+.itemListRow {
+  overflow: hidden;
+}
+.itemListRow h2 {
+  font-weight: bold;
+  margin: 15px 30px;
+}
+.itemListRow--horizontal {
+  width: 2000vw;
+}
+.itemListRow--listArea {
+  padding-left: 30px;
+}
+.itemListRow--item {
+  display: inline-block;
+  width: 150px;
+}
+.itemListRow--item img {
+  width: 100%;
+  transform: scale(0.9);
+  transition: all ease 0.2s;
+}
+.itemListRow--item img:hover {
+  transform: scale(1);
+}
