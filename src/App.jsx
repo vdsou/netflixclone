@@ -6,7 +6,7 @@ import tmdb from './api/tmdb';
 
 function App() {
   const [itemList, setItemList] = useState([]);
-  const [featuredItem, setFeaturedItem] = useState([]);
+  const [featuredItem, setFeaturedItem] = useState(null);
   useEffect(() => {
     const listAll = async () => {
       const list = await tmdb.getAllList();
@@ -23,11 +23,9 @@ function App() {
     };
     listAll();
   }, []);
-  console.log(featuredItem);
-
   return (
     <div className="App">
-      <FeaturedItem />
+      {featuredItem && <FeaturedItem data={featuredItem} />}
       <section className="lists">
         {itemList.map((item) => (
           <div key={item.id}>
