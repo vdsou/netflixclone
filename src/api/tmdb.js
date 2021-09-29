@@ -66,4 +66,8 @@ export default {
       },
     ];
   },
+  async getFeaturedItem(id, type) {
+    const result = await getData(`/${type}/${id}?api_key=${API_KEY}&language=pt-BR`);
+    return result;
+  },
 };
