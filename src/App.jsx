@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import ItemList from './components/ItemList';
 import FeaturedItem from './components/FeaturedItem';
 import Header from './components/Header';
+import Footer from './components/Footer';
 import './App.css';
 import tmdb from './api/tmdb';
 
@@ -47,6 +48,7 @@ function App() {
           </div>
         ))}
       </section>
+      <Footer />
     </div>
   );
 }
