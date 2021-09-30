@@ -8,7 +8,7 @@
 .itemListRow--horizontal {
   width: 2000vw;
   margin-left: -150px;
-  transition: all ease 0.2s;
+  transition: all ease 0.5s;
 }
 .itemListRow--listArea {
   padding-left: 30px;
@@ -49,6 +49,12 @@
   right: 0;
 }
 .itemListRow:hover .featuredItem--navBefore,
-.itemListRow:hover .featuredItem--navNext{
+.itemListRow:hover .featuredItem--navNext {
   opacity: 1;
+}
+@media (max-width: 700px) {
+  .featuredItem--navBefore,
+  .featuredItem--navNext {
+    opacity: 1;
+  }
 }
