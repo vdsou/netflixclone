@@ -12,7 +12,15 @@ function FeaturedItem(props) {
   const year = releaseDate.getFullYear();
   let genres = data.genres.map((genre) => genre.name);
   genres = genres.join(', ');
-  // console.log(data);
+  let { overview } = data;
+  const overviewSplit = overview.split(' ');
+  if (overviewSplit.length > 50) {
+    const cutOverview = overviewSplit.splice(0, 50);
+    let lastWord = cutOverview[cutOverview.length - 1];
+    lastWord = lastWord.replace(/[,.!:]+|\s*$/, '...');
+    cutOverview[cutOverview.length - 1] = lastWord;
+    overview = cutOverview.join(' ');
+  }
   return (
     <section
       className="featuredItem"
@@ -37,7 +45,7 @@ function FeaturedItem(props) {
               {data.number_of_seasons !== 1 ? 's' : ''}
             </div>
           </div>
-          <div className="featuredItem--overview">{data.overview}</div>
+          <div className="featuredItem--overview">{overview}</div>
           <div className="buttons">
             <button type="button" className="featuredItem--watchButton">
               {' '}
