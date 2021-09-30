@@ -24,3 +24,29 @@
   transform: scale(1);
   cursor: pointer;
 }
+.featuredItem--navBefore,
+.featuredItem--navNext {
+  position: absolute;
+  z-index: 999;
+  height: 225px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.6);
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  opacity: 0;
+  transition: all ease 0.2s;
+}
+.featuredItem--navBefore {
+  left: 0;
+}
+.featuredItem--navNext {
+  right: 0;
+}
+.itemListRow:hover .featuredItem--navBefore,
+.itemListRow:hover .featuredItem--navNext{
+  opacity: 1;
+}
