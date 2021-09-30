@@ -70,13 +70,14 @@
   font-size: 18px;
   color: #999;
 }
-@media (max-width: 700px) {
+@media (max-width: 760px) {
   .featuredItem--title {
     font-size: 40px;
     max-width: 90%;
   }
   .featuredItem--x {
     height: 90vh;
+    padding-bottom: 120px;
   }
   .featuredItem--info {
     font-size: 16px;
