@@ -12,9 +12,9 @@ function FeaturedItem(props) {
   const year = releaseDate.getFullYear();
   let genres = data.genres.map((genre) => genre.name);
   genres = genres.join(', ');
-  console.log(data);
+  // console.log(data);
   return (
-    <div
+    <section
       className="featuredItem"
       style={{
         backgroundImage: `url("https://image.tmdb.org/t/p/original${backgroundImg}")`,
@@ -22,30 +22,36 @@ function FeaturedItem(props) {
         backgroundSize: 'cover',
       }}
     >
-      <h1 className="featuredItem--title">{data.name}</h1>
-      <div className="featuredItem--points">
-        {data.vote_average}
-        <span> pontos</span>
+      <div className="featuredItem--y">
+        <div className="featuredItem--x">
+          <h1 className="featuredItem--title">{data.name}</h1>
+          <div className="featuredItem--info">
+            <div className="featuredItem--points">
+              {data.vote_average}
+              <span> pontos</span>
+            </div>
+            <div className="featuredItem--year">{year}</div>
+            <div className="featuredItem--seasons">
+              {data.number_of_seasons}
+              <span> temporada</span>
+              {data.number_of_seasons !== 1 ? 's' : ''}
+            </div>
+          </div>
+          <div className="featuredItem--overview">{data.overview}</div>
+          <div className="buttons">
+            <button type="button" className="featuredItem--watchButton">
+              {' '}
+              ▸ Assistir
+            </button>
+            <button type="button" className="featuredItem--addButton">
+              {' '}
+              + Minha Lista
+            </button>
+          </div>
+          <div className="featuredItem--genres">{genres}</div>
+        </div>
       </div>
-      <div className="featuredItem--year">{year}</div>
-      <div className="featuredItem--seasons">
-        {data.number_of_seasons}
-        <span> temporada</span>
-        {data.number_of_seasons !== 1 ? 's' : ''}
-      </div>
-      <div className="featuredItem--overview">{data.overview}</div>
-      <div className="buttons">
-        <button type="button" className="featuredItem--watchButton">
-          {' '}
-          ▸ Assistir
-        </button>
-        <button type="button" className="featuredItem--addButton">
-          {' '}
-          + Minha Lista
-        </button>
-      </div>
-      <div className="featuredItem--genres">{genres}</div>
-    </div>
+    </section>
   );
 }
 FeaturedItem.propTypes = {

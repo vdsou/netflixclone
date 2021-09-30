@@ -1,6 +1,72 @@
-.featuredItem{
-    height: 100vh;
+.featuredItem {
+  height: 100vh;
 }
-.featuredItem--title{
-    font-size: 60px;
+.featuredItem--y {
+  height: inherit;
+  width: inherit;
+  background: linear-gradient(to top, #111 10%, transparent 90%);
+}
+.featuredItem--x {
+  width: 40%;
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 30px;
+  background: linear-gradient(to right, #111 30%, transparent 70%);
+  padding-bottom: 150px;
+
+}
+.featuredItem--title {
+  font-size: 60px;
+}
+.featuredItem--info {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+.featuredItem--points,
+.featuredItem--year,
+.featuredItem--seasons {
+  display: inline-block;
+  margin-right: 15px;
+}
+.featuredItem--points {
+  color: #46d369;
+}
+.featuredItem--overview {
+  font-size: 20px;
+  color: #999;
+  margin-top: 15px;
+}
+.featuredItem--watchButton,
+.featuredItem--addButton {
+  padding: 12px 20px;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 15px;
+  margin-right: 15px;
+  display: inline-block;
+  border: none;
+  border-radius: 5px;
+  opacity: 1;
+  cursor: pointer;
+  transition: all ease 0.2s;
+}
+.featuredItem--addButton {
+  background: #111;
+  color: #fff;
+}
+.featuredItem--watchButton {
+  background: #fff;
+  color: #111;
+}
+.featuredItem--watchButton:hover,
+.featuredItem--addButton:hover {
+  opacity: 0.9;
+}
+.featuredItem--genres {
+  margin-top: 15px;
+  font-size: 18px;
+  color: #999;
 }
