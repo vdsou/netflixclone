@@ -7,7 +7,7 @@
   background: linear-gradient(to top, #111 10%, transparent 90%);
 }
 .featuredItem--x {
-  width: 40%;
+  width: inherit;
   height: inherit;
   display: flex;
   flex-direction: column;
@@ -15,7 +15,6 @@
   padding-left: 30px;
   background: linear-gradient(to right, #111 30%, transparent 70%);
   padding-bottom: 150px;
-
 }
 .featuredItem--title {
   font-size: 60px;
@@ -35,6 +34,7 @@
   color: #46d369;
 }
 .featuredItem--overview {
+  max-width: 40%;
   font-size: 20px;
   color: #999;
   margin-top: 15px;
@@ -69,4 +69,28 @@
   margin-top: 15px;
   font-size: 18px;
   color: #999;
+}
+@media (max-width: 700px) {
+  .featuredItem--title {
+    font-size: 40px;
+    max-width: 90%;
+  }
+  .featuredItem--x {
+    height: 90vh;
+  }
+  .featuredItem--info {
+    font-size: 16px;
+  }
+  .featuredItem--overview {
+    font-size: 14px;
+    max-width: 100%;
+    margin-right: 30px;
+  }
+  .featuredItem--watchButton,
+  .featuredItem--addButton {
+    font-size: 16px;
+  }
+  .featuredItem--genres{
+    font-size: 14px;
+  }
 }
