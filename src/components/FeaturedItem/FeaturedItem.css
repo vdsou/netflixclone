@@ -63,7 +63,7 @@
 }
 .featuredItem--watchButton:hover,
 .featuredItem--addButton:hover {
-  opacity: 0.9;
+  opacity: 0.8;
 }
 .featuredItem--genres {
   margin-top: 15px;
