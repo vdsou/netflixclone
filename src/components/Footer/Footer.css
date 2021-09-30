@@ -1,0 +1,17 @@
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 50px;
+  margin-top: 30px;
+}
+footer p{
+  margin: 5px 0;
+}
+a{
+  text-decoration: none;
+  color: #fff;
+}
+a:hover{
+  border-bottom: 1px solid #fff;
+}
