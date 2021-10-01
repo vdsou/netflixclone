@@ -5,13 +5,14 @@ footer {
   padding-bottom: 50px;
   margin-top: 30px;
 }
-footer p{
+footer p {
   margin: 5px 0;
 }
-a{
+footer a {
   text-decoration: none;
   color: #fff;
+  opacity: 1;
 }
-a:hover{
-  border-bottom: 1px solid #fff;
+footer a:hover {
+  opacity: 0.8;
 }
